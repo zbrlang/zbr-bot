@@ -1,0 +1,120 @@
+#trigger !related
+#name Related Functions
+#type prefix
+#description Shows functions related to the given function by finding others in the same category.
+
+ZargsCheck{1;1;Usage: !related <function_name>}
+
+Zif{ZgetServerVar{_cached}!=true;
+ZsetServerVar{actions;Zreply|ZreplyIn|ZsendMessage}
+ZsetServerVar{audit;ZauditCount|ZauditEntries|ZauditEntryAction|ZauditEntryChanges|ZauditEntryID|ZauditEntryReason|ZauditEntryTarget|ZauditEntryUser|ZauditLatest}
+ZsetServerVar{automod;ZautomodRule|ZautomodRuleCreate|ZautomodRuleDelete|ZautomodRuleEdit|ZautomodRuleUpdate|ZautomodRules}
+ZsetServerVar{blacklists;ZblackListIDs|ZblackListRoles|ZblackListRolesIDs|ZblackListServers|ZblackListUsers}
+ZsetServerVar{bot;ZallMembersCount|ZbotCommands|ZbotID|ZbotOwnerID|ZbotTyping|ZcommandName|ZcommandTrigger|ZcommandsCount|Zenabled|ZexecutionTime|Zping|ZserverCount|ZserverNames|ZslashCommandsCount|ZslashID|Zuptime}
+ZsetServerVar{channels;ZafkChannelID|ZcategoryChannels|ZcategoryCount|ZcategoryID|ZchannelCount|ZchannelCreated|ZchannelExists|ZchannelName|ZchannelNames|ZchannelPosition|ZchannelTopic|ZchannelType|ZchannelWebhooks|ZcreateChannel|ZdeleteChannels|ZdeleteChannelsByName|ZdmChannelID|ZeditChannelPerms|ZgetSlowmode|ZisNSFW|ZlastMessageID|ZlastPinTimestamp|ZmodifyChannel|ZparentID|ZrulesChannelID|ZserverChannels|ZslowMode|ZsyncPerms|ZsystemChannelID|ZvoiceUserLimit}
+ZsetServerVar{components;ZaddButton|ZaddMentionableSelect|ZaddRoleSelect|ZaddSelectMenuOption|ZaddTextInput|ZaddUserSelect|ZcustomID|Zdefer|ZeditButton|ZeditSelectMenu|ZeditSelectMenuOption|ZgetMentionableSelectUserCount|ZgetMentionableSelectUserID|ZgetMentionableSelectUserIDs|ZgetRoleSelectRoleCount|ZgetRoleSelectRoleID|ZgetRoleSelectRoleIDs|ZgetUserSelectUserCount|ZgetUserSelectUserID|ZgetUserSelectUserIDs|ZinputValue|ZnewModal|ZnewSelectMenu|ZremoveAllComponents|ZremoveButtons|ZremoveComponent}
+ZsetServerVar{context;ZallowRoleMentions|ZallowUserMentions|Zmessage|Zoption}
+ZsetServerVar{control;ZargsCheck|ZcheckCondition|Zif|ZisBoolean|ZisInteger|ZisNumber|ZisSlash|ZisValidHex|Znot|ZonlyIf}
+ZsetServerVar{cooldown;ZchangeCooldownTime|Zcooldown|ZgetCooldown|ZglobalCooldown|ZserverCooldown}
+ZsetServerVar{embeds;ZaddField|Zauthor|ZauthorIcon|ZauthorURL|Zcolor|Zdescription|Zfooter|ZfooterIcon|Zimage|ZsendEmbed|ZsendWebhook|Zthumbnail|Ztimestamp|Ztitle|ZtitleURL|ZwebhookCreate|ZwebhookDelete}
+ZsetServerVar{emojis;ZaddEmoji|ZappEmojiCreate|ZappEmojiDelete|ZappEmojis|ZcustomEmoji|ZemojiExists|ZemojiName|ZemoteCount|ZisEmojiAnimated|ZremoveEmoji}
+ZsetServerVar{errors;Zerror|Zstop|ZsuppressErrors|ZtryRun}
+ZsetServerVar{events;ZcreateEvent|ZdeleteEvent|ZeditEvent|ZeventChannel|ZeventCount|ZeventDescription|ZeventEnd|ZeventName|ZeventStart|ZeventStatus|ZeventSubscribers|ZserverEvents}
+ZsetServerVar{forums;ZcreateForumTag|ZcreatePost|ZdeleteForumTag|ZeditForumTag|ZforumPostCount|ZforumPostLock|ZforumPostPin|ZforumPosts|ZforumTagEmoji|ZforumTagID|ZforumTagModerated|ZforumTags|ZpostTags|ZsetPostTags}
+ZsetServerVar{http;ZhttpAddHeader|ZhttpDelete|ZhttpGet|ZhttpGetHeader|ZhttpPatch|ZhttpPost|ZhttpPut|ZhttpRemoveHeader|ZhttpResult|ZhttpStatus}
+ZsetServerVar{id;ZchannelID|ZguildID|ZroleID|ZuserID}
+ZsetServerVar{invites;ZchannelInvites|ZcreateInvite|ZdeleteInvite|ZinviteInfo|ZserverInvite}
+ZsetServerVar{json;ZjsonArray|ZjsonArrayAppend|ZjsonArrayCount|ZjsonArrayIndex|ZjsonArrayPop|ZjsonArrayReverse|ZjsonArrayShift|ZjsonArraySort|ZjsonArrayUnshift|ZjsonClear|ZjsonExists|ZjsonGet|ZjsonJoinArray|ZjsonParse|ZjsonPretty|ZjsonSet|ZjsonStringify|ZjsonUnset}
+ZsetServerVar{loops;ZforJson|ZforSplit|ZloopIndex|ZloopValue|Zrepeat}
+ZsetServerVar{math;Zabs|Zcalculate|Zceil|Zdiv|Zfloor|Zmax|Zmin|Zmodulo|Zmulti|Zpow|Zround|Zsort|Zsqrt|Zsub|Zsum}
+ZsetServerVar{message;ZdeleteMessage|Zdm|ZeditMessage|Zephemeral|ZgetAttachments|ZgetEmbedData|ZgetMessage|ZisMentioned|ZisMessageEdited|Zmentioned|ZmessageID|ZmessageLink|ZpinList|ZpinMessage|ZpublishMessage|ZrepliedMessageID|ZunpinMessage|ZuseChannel}
+ZsetServerVar{moderation;Zban|Zclear|Zdeafen|ZgetBanReason|ZisBanned|ZisTimedOut|Zkick|Zmute|Ztimeout|Zunban|Zundeafen|Zunmute|ZuntimeOut}
+ZsetServerVar{permissions;ZcheckUserPerms|ZignoreChannels|ZonlyAdmin|ZonlyBotChannelPerms|ZonlyBotPerms|ZonlyForCategories|ZonlyForChannels|ZonlyForIDs|ZonlyForRoleIDs|ZonlyForRoles|ZonlyForServers|ZonlyForUsers|ZonlyIfMessageContains|ZonlyNSFW|ZonlyPerms}
+ZsetServerVar{polls;ZpollAddAnswer|ZpollAllowMultiselect|ZpollAnswerVoters|ZpollAnswerVotes|ZpollCreate|ZpollEnd|ZpollGet|ZpollSend}
+ZsetServerVar{random;Zrandom|ZrandomCategoryID|ZrandomChannelID|ZrandomGuildID|ZrandomMention|ZrandomRoleID|ZrandomString|ZrandomText|ZrandomUser|ZrandomUserID}
+ZsetServerVar{reactions;ZaddCmdReactions|ZaddMessageReactions|ZaddReactions|ZclearReactions|ZgetReactions|ZuserReacted}
+ZsetServerVar{roles;ZcolorRole|ZcreateRole|ZdeleteRole|ZhasRole|ZhighestRole|ZhighestRoleWithPerms|ZisHoisted|ZisMentionable|ZlowestRole|ZlowestRoleWithPerms|ZmodifyRole|ZmodifyRolePerms|ZroleColor|ZroleCount|ZroleExists|ZroleGrant|ZroleMemberCount|ZroleMembers|ZroleName|ZroleNames|ZrolePerms|ZrolePosition|ZserverRoles|ZsetUserRoles|ZuserRoles}
+ZsetServerVar{runtime;Zasync|Zawait|Zdelay}
+ZsetServerVar{servers;ZafkTimeout|ZboostCount|ZboostLevel|ZeditWelcomeScreen|ZguildBanner|ZguildExists|ZmembersCount|ZserverDescription|ZserverEmojis|ZserverIcon|ZserverLockdown|ZserverModify|ZserverName|ZserverOwner|ZserverVerificationLevel|ZwelcomeScreen}
+ZsetServerVar{soundboard;ZsoundboardCreate|ZsoundboardDefaultSounds|ZsoundboardDelete|ZsoundboardEdit|ZsoundboardPlay|ZsoundboardSound|ZsoundboardSounds}
+ZsetServerVar{special;Zeval}
+ZsetServerVar{stage;ZstageCreate|ZstageDelete|ZstageEdit|ZstageTopic}
+ZsetServerVar{stickers;ZdeleteSticker|ZserverStickers|ZstickerCount|ZstickerCreate|ZstickerDescription|ZstickerEdit|ZstickerEmoji|ZstickerExists|ZstickerID|ZstickerName}
+ZsetServerVar{string;ZargCount|ZbyteCount|ZcharCount|ZcheckContains|ZcropText|ZendsWith|ZindexOf|ZlinesCount|Zlowercase|ZnumberSeparator|ZpadLeft|ZpadRight|ZregexMatch|ZregexReplace|ZremoveLinks|ZreplaceText|ZstartsWith|Zsubstring|Ztitlecase|ZtrimContent|ZtrimSpace|Zuppercase|Zurl}
+ZsetServerVar{textsplit;ZeditSplitText|ZgetTextSplitIndex|ZgetTextSplitLength|ZjoinSplitText|ZremoveSplitTextElement|ZsplitText|ZtextSplit}
+ZsetServerVar{threads;ZeditThread|ZstartThread|ZthreadAddMember|ZthreadArchive|ZthreadArchived|ZthreadList|ZthreadLocked|ZthreadMessageCount|ZthreadMetadata|ZthreadParentID|ZthreadPin|ZthreadRemoveMember|ZthreadUnarchive|ZthreadUserCount}
+ZsetServerVar{time;Zdate|Zday|ZfromTimestamp|ZgetTimestamp|Zhour|Zminute|Zmonth|Zsecond|Ztime|ZtimeDiff|Zyear}
+ZsetServerVar{users;ZchangeNickname|ZcreationDate|ZdisplayName|ZisAdmin|ZisBooster|ZisBot|ZisModerator|ZisUserDMEnabled|ZuserAvatar|ZuserBadge|ZuserBanner|ZuserBannerColor|ZuserExists|ZuserJoined|ZuserPerms|ZuserServerAvatar|ZuserStatus|Zusername}
+ZsetServerVar{utility;Zbase64Decode|Zbase64Encode|Zduration|Zentitlements|Zmd5|Zsha256|Zskus}
+ZsetServerVar{variables;ZgetChannelVar|ZgetServerVar|ZgetUserVar|ZgetVar|ZlistVar|ZresetChannelVar|ZresetServerVar|ZresetUserVar|ZsetChannelVar|ZsetServerVar|ZsetUserVar|ZsetVar|Zvar|ZvarExistError|ZvarExists}
+ZsetServerVar{voice;ZisInVoice|ZuserSelfDeafened|ZuserSelfMuted|ZuserServerDeafened|ZuserServerMuted|ZuserStreaming|ZuserVoiceChannel|ZvoiceBitrate|ZvoiceEmpty|ZvoiceFull|ZvoiceKick|ZvoiceMemberCount|ZvoiceMembers|ZvoiceMove|ZvoiceNew|ZvoiceOld|ZvoiceRequestToSpeak|ZvoiceStatus|ZvoiceSuppress}
+ZsetServerVar{_rev0;Zabs=math|ZaddButton=components|ZaddCmdReactions=reactions|ZaddEmoji=emojis|ZaddField=embeds|ZaddMentionableSelect=components|ZaddMessageReactions=reactions|ZaddReactions=reactions|ZaddRoleSelect=components|ZaddSelectMenuOption=components|ZaddTextInput=components|ZaddUserSelect=components|ZafkChannelID=channels|ZafkTimeout=servers|ZallMembersCount=bot|ZallowRoleMentions=context|ZallowUserMentions=context|ZappEmojiCreate=emojis|ZappEmojiDelete=emojis|ZappEmojis=emojis|ZargCount=string|ZargsCheck=control|Zasync=runtime|ZauditCount=audit|ZauditEntries=audit|ZauditEntryAction=audit|ZauditEntryChanges=audit|ZauditEntryID=audit|ZauditEntryReason=audit|ZauditEntryTarget=audit|ZauditEntryUser=audit|ZauditLatest=audit|Zauthor=embeds|ZauthorIcon=embeds|ZauthorURL=embeds|ZautomodRule=automod|ZautomodRuleCreate=automod|ZautomodRuleDelete=automod|ZautomodRuleEdit=automod|ZautomodRuleUpdate=automod|ZautomodRules=automod|Zawait=runtime|Zban=moderation|Zbase64Decode=utility|Zbase64Encode=utility|ZblackListIDs=blacklists|ZblackListRoles=blacklists|ZblackListRolesIDs=blacklists|ZblackListServers=blacklists|ZblackListUsers=blacklists|ZboostCount=servers|ZboostLevel=servers|ZbotCommands=bot|ZbotID=bot|ZbotOwnerID=bot|ZbotTyping=bot|ZbyteCount=string|Zcalculate=math|ZcategoryChannels=channels|ZcategoryCount=channels|ZcategoryID=channels|Zceil=math|ZchangeCooldownTime=cooldown|ZchangeNickname=users|ZchannelCount=channels|ZchannelCreated=channels|ZchannelExists=channels|ZchannelID=id|ZchannelInvites=invites|ZchannelName=channels|ZchannelNames=channels|ZchannelPosition=channels|ZchannelTopic=channels|ZchannelType=channels|ZchannelWebhooks=channels|ZcharCount=string|ZcheckCondition=control|ZcheckContains=string|ZcheckUserPerms=permissions|Zclear=moderation|ZclearReactions=reactions|Zcolor=embeds|ZcolorRole=roles|ZcommandName=bot|ZcommandTrigger=bot|ZcommandsCount=bot|Zcooldown=cooldown|ZcreateChannel=channels|ZcreateEvent=events|ZcreateForumTag=forums|ZcreateInvite=invites|ZcreatePost=forums|ZcreateRole=roles|ZcreationDate=users|ZcropText=string|ZcustomEmoji=emojis|ZcustomID=components|Zdate=time|Zday=time|Zdeafen=moderation|Zdefer=components|Zdelay=runtime|ZdeleteChannels=channels|ZdeleteChannelsByName=channels|ZdeleteEvent=events|ZdeleteForumTag=forums|ZdeleteInvite=invites|ZdeleteMessage=message|ZdeleteRole=roles|ZdeleteSticker=stickers|Zdescription=embeds|ZdisplayName=users|Zdiv=math|Zdm=message|ZdmChannelID=channels|Zduration=utility|ZeditButton=components|ZeditChannelPerms=channels|ZeditEvent=events|ZeditForumTag=forums|ZeditMessage=message|ZeditSelectMenu=components|ZeditSelectMenuOption=components|ZeditSplitText=textsplit|ZeditThread=threads|ZeditWelcomeScreen=servers|ZemojiExists=emojis|ZemojiName=emojis|ZemoteCount=emojis|Zenabled=bot|ZendsWith=string|Zentitlements=utility|Zephemeral=message|Zerror=errors|Zeval=special|ZeventChannel=events|ZeventCount=events|ZeventDescription=events|ZeventEnd=events|ZeventName=events|ZeventStart=events|ZeventStatus=events|ZeventSubscribers=events|ZexecutionTime=bot|Zfloor=math|Zfooter=embeds|ZfooterIcon=embeds|ZforJson=loops|ZforSplit=loops|ZforumPostCount=forums|ZforumPostLock=forums|ZforumPostPin=forums|ZforumPosts=forums|ZforumTagEmoji=forums|ZforumTagID=forums|ZforumTagModerated=forums|ZforumTags=forums|ZfromTimestamp=time|ZgetAttachments=message|ZgetBanReason=moderation|ZgetChannelVar=variables|ZgetCooldown=cooldown|ZgetEmbedData=message|ZgetMentionableSelectUserCount=components|ZgetMentionableSelectUserID=components|ZgetMentionableSelectUserIDs=components|ZgetMessage=message|ZgetReactions=reactions|ZgetRoleSelectRoleCount=components|ZgetRoleSelectRoleID=components|ZgetRoleSelectRoleIDs=components|ZgetServerVar=variables|ZgetSlowmode=channels|ZgetTextSplitIndex=textsplit|ZgetTextSplitLength=textsplit|ZgetTimestamp=time|ZgetUserSelectUserCount=components|ZgetUserSelectUserID=components|ZgetUserSelectUserIDs=components|ZgetUserVar=variables|ZgetVar=variables|ZglobalCooldown=cooldown|ZguildBanner=servers|ZguildExists=servers|ZguildID=id|ZhasRole=roles|ZhighestRole=roles|ZhighestRoleWithPerms=roles|Zhour=time|ZhttpAddHeader=http|ZhttpDelete=http|ZhttpGet=http|ZhttpGetHeader=http|ZhttpPatch=http|ZhttpPost=http|ZhttpPut=http|ZhttpRemoveHeader=http|ZhttpResult=http|ZhttpStatus=http|Zif=control}
+ZsetServerVar{_rev1;ZignoreChannels=permissions|Zimage=embeds|ZindexOf=string|ZinputValue=components|ZinviteInfo=invites|ZisAdmin=users|ZisBanned=moderation|ZisBoolean=control|ZisBooster=users|ZisBot=users|ZisEmojiAnimated=emojis|ZisHoisted=roles|ZisInVoice=voice|ZisInteger=control|ZisMentionable=roles|ZisMentioned=message|ZisMessageEdited=message|ZisModerator=users|ZisNSFW=channels|ZisNumber=control|ZisSlash=control|ZisTimedOut=moderation|ZisUserDMEnabled=users|ZisValidHex=control|ZjoinSplitText=textsplit|ZjsonArray=json|ZjsonArrayAppend=json|ZjsonArrayCount=json|ZjsonArrayIndex=json|ZjsonArrayPop=json|ZjsonArrayReverse=json|ZjsonArrayShift=json|ZjsonArraySort=json|ZjsonArrayUnshift=json|ZjsonClear=json|ZjsonExists=json|ZjsonGet=json|ZjsonJoinArray=json|ZjsonParse=json|ZjsonPretty=json|ZjsonSet=json|ZjsonStringify=json|ZjsonUnset=json|Zkick=moderation|ZlastMessageID=channels|ZlastPinTimestamp=channels|ZlinesCount=string|ZlistVar=variables|ZloopIndex=loops|ZloopValue=loops|Zlowercase=string|ZlowestRole=roles|ZlowestRoleWithPerms=roles|Zmax=math|Zmd5=utility|ZmembersCount=servers|Zmentioned=message|Zmessage=context|ZmessageID=message|ZmessageLink=message|Zmin=math|Zminute=time|ZmodifyChannel=channels|ZmodifyRole=roles|ZmodifyRolePerms=roles|Zmodulo=math|Zmonth=time|Zmulti=math|Zmute=moderation|ZnewModal=components|ZnewSelectMenu=components|Znot=control|ZnumberSeparator=string|ZonlyAdmin=permissions|ZonlyBotChannelPerms=permissions|ZonlyBotPerms=permissions|ZonlyForCategories=permissions|ZonlyForChannels=permissions|ZonlyForIDs=permissions|ZonlyForRoleIDs=permissions|ZonlyForRoles=permissions|ZonlyForServers=permissions|ZonlyForUsers=permissions|ZonlyIf=control|ZonlyIfMessageContains=permissions|ZonlyNSFW=permissions|ZonlyPerms=permissions|Zoption=context|ZpadLeft=string|ZpadRight=string|ZparentID=channels|ZpinList=message|ZpinMessage=message|Zping=bot|ZpollAddAnswer=polls|ZpollAllowMultiselect=polls|ZpollAnswerVoters=polls|ZpollAnswerVotes=polls|ZpollCreate=polls|ZpollEnd=polls|ZpollGet=polls|ZpollSend=polls|ZpostTags=forums|Zpow=math|ZpublishMessage=message|Zrandom=random|ZrandomCategoryID=random|ZrandomChannelID=random|ZrandomGuildID=random|ZrandomMention=random|ZrandomRoleID=random|ZrandomString=random|ZrandomText=random|ZrandomUser=random|ZrandomUserID=random|ZregexMatch=string|ZregexReplace=string|ZremoveAllComponents=components|ZremoveButtons=components|ZremoveComponent=components|ZremoveEmoji=emojis|ZremoveLinks=string|ZremoveSplitTextElement=textsplit|Zrepeat=loops|ZreplaceText=string|ZrepliedMessageID=message|Zreply=actions|ZreplyIn=actions|ZresetChannelVar=variables|ZresetServerVar=variables|ZresetUserVar=variables|ZroleColor=roles|ZroleCount=roles|ZroleExists=roles|ZroleGrant=roles|ZroleID=id|ZroleMemberCount=roles|ZroleMembers=roles|ZroleName=roles|ZroleNames=roles|ZrolePerms=roles|ZrolePosition=roles|Zround=math|ZrulesChannelID=channels|Zsecond=time|ZsendEmbed=embeds|ZsendMessage=actions|ZsendWebhook=embeds|ZserverChannels=channels|ZserverCooldown=cooldown|ZserverCount=bot|ZserverDescription=servers|ZserverEmojis=servers|ZserverEvents=events|ZserverIcon=servers|ZserverInvite=invites|ZserverLockdown=servers|ZserverModify=servers|ZserverName=servers|ZserverNames=bot|ZserverOwner=servers|ZserverRoles=roles|ZserverStickers=stickers|ZserverVerificationLevel=servers|ZsetChannelVar=variables|ZsetPostTags=forums|ZsetServerVar=variables|ZsetUserRoles=roles|ZsetUserVar=variables|ZsetVar=variables|Zsha256=utility|Zskus=utility|ZslashCommandsCount=bot|ZslashID=bot|ZslowMode=channels|Zsort=math|ZsoundboardCreate=soundboard|ZsoundboardDefaultSounds=soundboard|ZsoundboardDelete=soundboard|ZsoundboardEdit=soundboard|ZsoundboardPlay=soundboard|ZsoundboardSound=soundboard|ZsoundboardSounds=soundboard|ZsplitText=textsplit|Zsqrt=math|ZstageCreate=stage|ZstageDelete=stage|ZstageEdit=stage|ZstageTopic=stage|ZstartThread=threads|ZstartsWith=string|ZstickerCount=stickers|ZstickerCreate=stickers|ZstickerDescription=stickers|ZstickerEdit=stickers|ZstickerEmoji=stickers|ZstickerExists=stickers|ZstickerID=stickers|ZstickerName=stickers|Zstop=errors}
+ZsetServerVar{_rev2;Zsub=math|Zsubstring=string|Zsum=math|ZsuppressErrors=errors|ZsyncPerms=channels|ZsystemChannelID=channels|ZtextSplit=textsplit|ZthreadAddMember=threads|ZthreadArchive=threads|ZthreadArchived=threads|ZthreadList=threads|ZthreadLocked=threads|ZthreadMessageCount=threads|ZthreadMetadata=threads|ZthreadParentID=threads|ZthreadPin=threads|ZthreadRemoveMember=threads|ZthreadUnarchive=threads|ZthreadUserCount=threads|Zthumbnail=embeds|Ztime=time|ZtimeDiff=time|Ztimeout=moderation|Ztimestamp=embeds|Ztitle=embeds|ZtitleURL=embeds|Ztitlecase=string|ZtrimContent=string|ZtrimSpace=string|ZtryRun=errors|Zunban=moderation|Zundeafen=moderation|Zunmute=moderation|ZunpinMessage=message|ZuntimeOut=moderation|Zuppercase=string|Zuptime=bot|Zurl=string|ZuseChannel=message|ZuserAvatar=users|ZuserBadge=users|ZuserBanner=users|ZuserBannerColor=users|ZuserExists=users|ZuserID=id|ZuserJoined=users|ZuserPerms=users|ZuserReacted=reactions|ZuserRoles=roles|ZuserSelfDeafened=voice|ZuserSelfMuted=voice|ZuserServerAvatar=users|ZuserServerDeafened=voice|ZuserServerMuted=voice|ZuserStatus=users|ZuserStreaming=voice|ZuserVoiceChannel=voice|Zusername=users|Zvar=variables|ZvarExistError=variables|ZvarExists=variables|ZvoiceBitrate=voice|ZvoiceEmpty=voice|ZvoiceFull=voice|ZvoiceKick=voice|ZvoiceMemberCount=voice|ZvoiceMembers=voice|ZvoiceMove=voice|ZvoiceNew=voice|ZvoiceOld=voice|ZvoiceRequestToSpeak=voice|ZvoiceStatus=voice|ZvoiceSuppress=voice|ZvoiceUserLimit=channels|ZwebhookCreate=embeds|ZwebhookDelete=embeds|ZwelcomeScreen=servers|Zyear=time}
+  ZsetServerVar{_cached;true}
+}
+
+Zvar{fn;Zmessage{1}}
+Zvar{fc;}
+
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{actions} contains Zvar{fn};Zvar{fc;actions}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{audit} contains Zvar{fn};Zvar{fc;audit}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{automod} contains Zvar{fn};Zvar{fc;automod}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{blacklists} contains Zvar{fn};Zvar{fc;blacklists}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{bot} contains Zvar{fn};Zvar{fc;bot}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{channels} contains Zvar{fn};Zvar{fc;channels}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{components} contains Zvar{fn};Zvar{fc;components}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{context} contains Zvar{fn};Zvar{fc;context}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{control} contains Zvar{fn};Zvar{fc;control}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{cooldown} contains Zvar{fn};Zvar{fc;cooldown}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{embeds} contains Zvar{fn};Zvar{fc;embeds}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{emojis} contains Zvar{fn};Zvar{fc;emojis}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{errors} contains Zvar{fn};Zvar{fc;errors}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{events} contains Zvar{fn};Zvar{fc;events}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{forums} contains Zvar{fn};Zvar{fc;forums}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{http} contains Zvar{fn};Zvar{fc;http}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{id} contains Zvar{fn};Zvar{fc;id}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{invites} contains Zvar{fn};Zvar{fc;invites}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{json} contains Zvar{fn};Zvar{fc;json}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{loops} contains Zvar{fn};Zvar{fc;loops}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{math} contains Zvar{fn};Zvar{fc;math}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{message} contains Zvar{fn};Zvar{fc;message}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{moderation} contains Zvar{fn};Zvar{fc;moderation}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{permissions} contains Zvar{fn};Zvar{fc;permissions}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{polls} contains Zvar{fn};Zvar{fc;polls}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{random} contains Zvar{fn};Zvar{fc;random}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{reactions} contains Zvar{fn};Zvar{fc;reactions}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{roles} contains Zvar{fn};Zvar{fc;roles}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{runtime} contains Zvar{fn};Zvar{fc;runtime}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{servers} contains Zvar{fn};Zvar{fc;servers}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{soundboard} contains Zvar{fn};Zvar{fc;soundboard}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{special} contains Zvar{fn};Zvar{fc;special}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{stage} contains Zvar{fn};Zvar{fc;stage}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{stickers} contains Zvar{fn};Zvar{fc;stickers}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{string} contains Zvar{fn};Zvar{fc;string}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{textsplit} contains Zvar{fn};Zvar{fc;textsplit}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{threads} contains Zvar{fn};Zvar{fc;threads}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{time} contains Zvar{fn};Zvar{fc;time}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{users} contains Zvar{fn};Zvar{fc;users}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{utility} contains Zvar{fn};Zvar{fc;utility}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{variables} contains Zvar{fn};Zvar{fc;variables}}}
+  Zif{Zvar{fc}==;Zif{ZgetServerVar{voice} contains Zvar{fn};Zvar{fc;voice}}}
+
+ZonlyIf{Zvar{fc}!=;Function "Zmessage{1}" not found or has no category.}
+
+Zvar{catdata;ZgetServerVar{Zvar{fc}}}
+ZtextSplit{Zvar{catdata};|}
+
+Zdescription{# Functions related to Zvar{fn}
+**Other functions in the *Zvar{fc}* category**:}
+Zcolor{#ffffff}
+ZforSplit{
+  Zvar{f;ZloopValue{}}
+  Zif{Zvar{f} != Zvar{fn};
+    Zvar{rlist;Zvar{rlist}
+    Zvar{f} }
+  }
+}
+ZaddField{Related functions;Zvar{rlist};false}
+Zfooter{ZBR Support | Use !find to search for specific functions}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
