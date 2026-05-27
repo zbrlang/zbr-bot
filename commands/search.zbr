@@ -12,5 +12,5 @@ Zdescription{# Search Results for "Zmessage{1}"
 ZforJson{data;Zif{ZcheckContains{ZhttpResult{Zcalculate{ZloopIndex{}-1};name};Zvar{kw}}||ZcheckContains{ZhttpResult{Zcalculate{ZloopIndex{}-1};description};Zvar{kw}};Zif{Zcalculate{Zvar{ct}}<11;**Zvar{ct}.** `ZhttpResult{Zcalculate{ZloopIndex{}-1};name}` - ZhttpResult{Zcalculate{ZloopIndex{}-1};description}Zvar{ct;Zsum{Zvar{ct};1}}}}}}
 ZonlyIf{Zcalculate{Zvar{ct}}>1;No results found for "Zmessage{1}". Try a different keyword.}
 Zcolor{#ffffff}
-Zfooter{ZBR Support | Zsub{Zvar{ct};1} result(s)}
+Zfooter{ZBR Support | Use !find to search for specific functions}
 ZfooterIcon{ZuserAvatar{ZbotID{}}}

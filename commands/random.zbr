@@ -1,0 +1,23 @@
+#trigger !random
+#name Random Function
+#type prefix
+#description Show a random ZBR function with full details. Great for discovering new functions!
+
+ZhttpGet{https://zbrlang.vercel.app/api/functions_tag_list}
+Zvar{rn;Zrandom{0;477}}
+Zvar{fn;ZhttpResult{Zvar{rn}}}
+ZhttpGet{https://zbrlang.vercel.app/api/functions/Zvar{fn}}
+ZjsonParse{ZhttpResult{}}
+Zdescription{# [ZjsonGet{name}](https://zbrlang.vercel.app/docs/functions/ZjsonGet{name})
+ZjsonGet{description}}
+Zcolor{#ffffff}
+ZaddField{Syntax;```ZhttpResult{syntax}```;false}
+ZaddField{Variadic;ZhttpResult{variadic};true}
+Zvar{as;}
+ZforJson{arguments;Zvar{as;Zvar{as}Zif{Zvar{as}!=;,}Zif{Zvar{as}!=; }ZhttpResult{arguments;Zcalculate{ZloopIndex{}-1};name} (ZhttpResult{arguments;Zcalculate{ZloopIndex{}-1};type})}}
+Zif{ZjsonArrayCount{arguments}>0;ZaddField{Arguments;Zvar{as};false}}
+Zif{ZjsonExists{example};
+  ZaddField{Example;```ZhttpResult{example}```;false}
+}
+Zfooter{ZBR Support | Use !find to search for specific functions}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
