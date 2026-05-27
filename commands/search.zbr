@@ -1,0 +1,16 @@
+#trigger !search
+#name Search Functions
+#type prefix
+#description Search for ZBR functions by keyword. Matches against function names and descriptions. Returns up to 10 results.
+
+ZargsCheck{1;1;Usage: !search <keyword>}
+ZhttpGet{https://zbrlang.vercel.app/api/functions_list}
+ZjsonParse{{"data":ZhttpResult{}}}
+Zvar{kw;Zlowercase{Zmessage{1}}}
+Zvar{ct;1}
+Zdescription{# Search Results for "Zmessage{1}"
+ZforJson{data;Zif{ZcheckContains{ZhttpResult{Zcalculate{ZloopIndex{}-1};name};Zvar{kw}}||ZcheckContains{ZhttpResult{Zcalculate{ZloopIndex{}-1};description};Zvar{kw}};Zif{Zcalculate{Zvar{ct}}<11;**Zvar{ct}.** `ZhttpResult{Zcalculate{ZloopIndex{}-1};name}` - ZhttpResult{Zcalculate{ZloopIndex{}-1};description}Zvar{ct;Zsum{Zvar{ct};1}}}}}}
+ZonlyIf{Zcalculate{Zvar{ct}}>1;No results found for "Zmessage{1}". Try a different keyword.}
+Zcolor{#ffffff}
+Zfooter{ZBR Support | Zsub{Zvar{ct};1} result(s)}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
