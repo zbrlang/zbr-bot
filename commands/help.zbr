@@ -12,4 +12,6 @@ Here is the list of every single command in this bot:
 !random - Get a random ZBR function with its details including syntax, description, arguments, and an example.
 !triggers - List all command triggers available in this bot.
 !category <category_name> - List all ZBR functions in a specific category with their descriptions. Case-insensitive.
+!stats - Provides current statistics about the ZBR language, including total functions, categories, triggers, and the latest version.
+!links - Provide a list of important links related to ZBRLang and ZBR, including repositories, documentation, and the support bot.
 }

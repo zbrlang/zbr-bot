@@ -1,0 +1,15 @@
+#trigger !stats
+#name Stats Command
+#type prefix
+#description Provides current statistics about the ZBR language, including total functions, categories, triggers, and the latest version.
+
+Zdescription{# ZBR Statistics
+Current state of the ZBR language}
+ZaddField{Total Functions;478;true}
+ZaddField{Categories;41;true}
+ZaddField{Total Triggers;22;true}
+ZaddField{Trigger Types;6;true}
+ZaddField{Latest Version;1.4.1;true}
+Zcolor{#ffffff}
+Zfooter{ZBR Support | Statistics}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}

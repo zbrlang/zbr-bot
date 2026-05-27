@@ -1,0 +1,22 @@
+#trigger !links
+#name Links Command
+#type prefix
+#description Provides a list of important links related to ZBRLang and ZBR, including repositories, documentation, and the support bot.
+
+Zdescription{# ZBR Links
+Complete ZBR links to everything related with ZBRLang and ZBR.}
+ZaddField{ZBRLang;https://github.com/zbrlang;false}
+ZaddField{ZBR;https://github.com/zbrlang/zbr;false}
+ZaddField{Website;https://zbrlang.vercel.app;false}
+ZaddField{Website (Repo);https://github.com/zbrlang/zbr-website;false}
+ZaddField{Docs;https://zbrlang.vercel.app/docs;false}
+ZaddField{Docs (Repo);https://github.com/zbrlang/zbr-website/blob/main/docs;false}
+ZaddField{Extensions;https://zbrlang.vercel.app/extensions;false}
+ZaddField{Extensions (Repo);https://github.com/zbrlang/zbr-extensions;false}
+ZaddField{Web API;https://zbrlang.vercel.app/api;false}
+ZaddField{Web API (Repo);https://github.com/zbrlang/zbr-website/tree/main/app/api;false}
+ZaddField{Support Bot;https://zbrlang.vercel.app/support-bot;false}
+ZaddField{Support Bot (Repo);https://github.com/zbrlang/zbr-bot;false}
+Zcolor{#ffffff}
+Zfooter{ZBR Support | Links}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
