@@ -1,0 +1,97 @@
+#trigger onInteraction
+#name Interaction Handler
+#type interaction
+#description List all functions in a ZBR category, or see all categories. Categories group functions by purpose (moderation, embeds, roles, etc.).
+
+Zupdate{}
+
+
+Zif{ZcustomID{}==cat;
+Zdescription{# ZBR Function Categories (42)
+Use `!category <name>` to list functions in a specific category.}
+Zcolor{#ffffff}
+ZaddField{actions;Send, reply, and manage message outputs;false}
+ZaddField{audit;Query Discord audit logs;false}
+ZaddField{automod;Create and manage auto-moderation rules;false}
+ZaddField{blacklists;Manage user, role, and server blacklists;false}
+ZaddField{bot;Bot information and utilities;false}
+ZaddField{channels;Channel operations and queries;false}
+ZaddField{components;Buttons, select menus, modals, and UI components;false}
+ZaddField{context;Access context (author, message, guild data);false}
+ZaddField{control;Control flow, conditions, and argument checking;false}
+ZaddField{cooldown;Command cooldown management;false}
+Zfooter{ZBR Support | Page 1 of 5}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZaddButton{no;cat;Next Page;secondary}
+}
+
+Zif{ZcustomID{}==cat1;
+Zdescription{# ZBR Function Categories (42)
+Use `!category <name>` to list functions in a specific category.}
+Zcolor{#ffffff}
+  ZaddField{embeds;Embed building and webhook sending;false}
+  ZaddField{emojis;Emoji management and queries;false}
+  ZaddField{errors;Error suppression and handling;false}
+  ZaddField{events;Scheduled server events;false}
+  ZaddField{forums;Forum channel post and tag management;false}
+  ZaddField{http;HTTP requests and headers;false}
+  ZaddField{id;Snowflake ID lookups and resolution;false}
+  ZaddField{invites;Invite creation and information;false}
+  ZaddField{json;JSON parsing and manipulation;false}
+  ZaddField{loops;Looping and iteration constructs;false}
+Zfooter{ZBR Support | Page 2 of 5}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZaddButton{no;cat;Previous Page;secondary}
+ZaddButton{no;cat2;Next Page;secondary}
+}
+
+Zif{ZcustomID{}==cat2;
+Zdescription{# ZBR Function Categories (42)
+Use `!category <name>` to list functions in a specific category.}
+Zcolor{#ffffff}
+  ZaddField{math;Mathematical operations;false}
+  ZaddField{message;Message operations (edit, delete, pin, etc.);false}
+  ZaddField{moderation;Moderation actions (ban, kick, mute, timeout);false}
+  ZaddField{permissions;Permission checks and restrictions;false}
+  ZaddField{polls;Create and manage Discord polls;false}
+  ZaddField{random;Random selection utilities;false}
+  ZaddField{reactions;Reaction management;false}
+  ZaddField{roles;Role management and queries;false}
+  ZaddField{runtime;Async, delay, and execution control;false}
+  ZaddField{servers;Server/guild information and management;false}
+Zfooter{ZBR Support | Page 3 of 5}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZaddButton{no;cat1;Previous Page;secondary}
+ZaddButton{no;cat3;Next Page;secondary}
+}
+
+Zif{ZcustomID{}==cat3;
+Zdescription{# ZBR Function Categories (42)
+Use `!category <name>` to list functions in a specific category.}
+Zcolor{#ffffff}
+ZaddField{soundboard;Server soundboard management;false}
+  ZaddField{special;Special/eval functions;false}
+  ZaddField{stage;Stage channel management;false}
+  ZaddField{stickers;Sticker management and queries;false}
+  ZaddField{string;String manipulation utilities;false}
+  ZaddField{textsplit;Text splitting and manipulation;false}
+  ZaddField{threads;Thread management and metadata;false}
+  ZaddField{time;Time and date utilities;false}
+  ZaddField{users;User information and queries;false}
+  ZaddField{utility;Utility functions (base64, hashing, entitlements);false}
+Zfooter{ZBR Support | Page 4 of 5}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZaddButton{no;cat2;Previous Page;secondary}
+ZaddButton{no;cat4;Next Page;secondary}
+}
+
+Zif{ZcustomID{}==cat4;
+Zdescription{# ZBR Function Categories (42)
+Use `!category <name>` to list functions in a specific category.}
+Zcolor{#ffffff}
+  ZaddField{variables;Persistent variable storage;false}
+  ZaddField{voice;Voice channel operations and queries;false}
+ZaddButton{no;cat3;Previous Page;secondary}
+Zfooter{ZBR Support | Page 5 of 5}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
+}
