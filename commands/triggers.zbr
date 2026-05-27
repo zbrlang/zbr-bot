@@ -1,0 +1,32 @@
+#trigger !triggers
+#name Trigger Types
+#type prefix
+#description Lists all ZBR event trigger types with descriptions of when they fire. Use #type event with these triggers.
+
+Zdescription{# ZBR Trigger Types
+Event triggers for use in `#trigger` headers. Use `#type event` with these. All triggers use `#scope guild`.}
+Zcolor{#ffffff}
+ZaddField{onMessage;Fires when any message is sent in a channel the bot can see.;true}
+ZaddField{onMessageEdit;Fires when a message is edited.;true}
+ZaddField{onMessageDelete;Fires when a message is deleted.;true}
+ZaddField{onReactionAdd;Fires when a reaction is added to a message.;true}
+ZaddField{onReactionRemove;Fires when a reaction is removed from a message.;true}
+ZaddField{onMemberJoin;Fires when a user joins the server.;true}
+ZaddField{onMemberLeave;Fires when a user leaves the server.;true}
+ZaddField{onMemberUpdate;Fires when member data changes (nickname, roles).;true}
+ZaddField{onVoiceStateUpdate;Fires when a user joins/leaves/moves voice.;true}
+ZaddField{onChannelCreate;Fires when a channel is created.;true}
+ZaddField{onChannelDelete;Fires when a channel is deleted.;true}
+ZaddField{onChannelUpdate;Fires when a channel is modified.;true}
+ZaddField{onRoleCreate;Fires when a role is created.;true}
+ZaddField{onRoleDelete;Fires when a role is deleted.;true}
+ZaddField{onRoleUpdate;Fires when a role is modified.;true}
+ZaddField{onGuildUpdate;Fires when guild settings change.;true}
+ZaddField{onBanAdd;Fires when a user is banned.;true}
+ZaddField{onBanRemove;Fires when a user is unbanned.;true}
+ZaddField{onBoostAdd;Fires when the server receives a boost.;true}
+ZaddField{onBoostRemove;Fires when the server loses a boost.;true}
+ZaddField{onBotJoin;Fires when the bot joins a new server.;true}
+ZaddField{onBotLeave;Fires when the bot leaves a server.;true}
+Zfooter{ZBR Support | 22 results}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
