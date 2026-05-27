@@ -1,0 +1,15 @@
+#trigger !help
+#name Help Command
+#type prefix
+#description Shows a help message with a list of all commands and their descriptions.
+
+Zreply{}
+Zdescription{# Help for ZBR Support Bot
+Here is the list of every single command in this bot:
+!help - Shows this message
+!find <function_name> - Search for an exact ZBR function by name and return full details including syntax, description, arguments, and an example. Case-insensitive.
+!search <query> - Search for ZBR functions by a query and return a list of matching functions with their descriptions. Case-insensitive.
+!random - Get a random ZBR function with its details including syntax, description, arguments, and an example.
+!triggers - List all command triggers available in this bot.
+!category <category_name> - List all ZBR functions in a specific category with their descriptions. Case-insensitive.
+}
