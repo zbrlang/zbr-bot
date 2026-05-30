@@ -27,22 +27,30 @@ This bot provides a powerful pool of support commands to help developers discove
 
 ## Quick Start
 
-### 1. Prerequisites
-Ensure you have the [ZBR CLI](https://github.com/zbrlang/zbr) installed:
-```bash
-npm i @zbrlang/zbr -g
-```
+### Option 1: Webapp Editor (Beta)
+Import the [zbr-export-support-bot.zip](/zbr-export-support-bot.zip) into the [ZBR Webapp](https://zbr-webapp.vercel.app) for a visual development experience:
+1. Import the project.
+2. Manage commands, variables, and settings visually.
+3. Export your customized version as a ZIP.
+4. Install the CLI, extract your ZIP, and run your bot with `zbr run`.
 
-### 2. Configuration
-1. Clone this repository.
-2. Create a `.env` file from the provided `.env.example`.
-3. Fill in your `DISCORD_TOKEN`, `BOT_ID`, and `GUILD_ID`.
+### Option 2: CLI (Manual)
+1. **Prerequisites**
+   Ensure you have the [ZBR CLI](https://github.com/zbrlang/zbr) installed:
+   ```bash
+   npm i @zbrlang/zbr -g
+   ```
 
-### 3. Running the Bot
-Simply run the following command in the project root:
-```bash
-zbr run
-```
+2. **Configuration**
+   1. Clone this repository.
+   2. Create a `.env` file from the provided `.env.example`.
+   3. Fill in your `DISCORD_TOKEN`, `BOT_ID`, and `GUILD_ID`.
+
+3. **Running the Bot**
+   Simply run the following command in the project root:
+   ```bash
+   zbr run
+   ```
 
 ## Production Ready
 
