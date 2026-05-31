@@ -15,3 +15,6 @@ Here is the list of every single command in this bot:
 !stats - Provides current statistics about the ZBR language, including total functions, categories, triggers, and the latest version.
 !links - Provide a list of important links related to ZBRLang and ZBR, including repositories, documentation, and the support bot.
 }
+Zcolor{#ffffff}
+Zfooter{ZBR Support | Help}
+ZfooterIcon{ZuserAvatar{ZbotID{}}}
