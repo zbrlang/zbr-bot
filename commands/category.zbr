@@ -18,7 +18,7 @@ ZaddField{context;Access context (author, message, guild data);false}
 ZaddField{control;Control flow, conditions, and argument checking;false}
 ZaddField{cooldown;Command cooldown management;false}
 Zfooter{ZBR Support | Page 1 of 5}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}
 ZaddButton{no;cat1;Next Page;secondary}
 }
 
@@ -74,16 +74,16 @@ Zif{Zmessage{1}!=;
   ZonlyIf{Zvar{catdata}!=;Unknown category "Zmessage{1}". Use `!category` to see all categories.}
 
   ZtextSplit{Zvar{catdata};|}
-  Zvar{count;ZgetTextSplitLength{}}
+  Zvar{count;ZgetTextSplitLength}
   Zdescription{# ZBR Function Categories (42)
   **Category: Zvar{cat_arg}**}
   Zcolor{#ffffff}
   ZforSplit{
-    Zvar{fn;ZloopValue{}}
+    Zvar{fn;ZloopValue}
     Zvar{flist;Zvar{flist} 
     Zvar{fn}}
   }
   ZaddField{Functions;Zvar{flist};false}
   Zfooter{ZBR Support | Use !find to search for specific functions}
-  ZfooterIcon{ZuserAvatar{ZbotID{}}}
+  ZfooterIcon{ZuserAvatar{ZbotID}}
 }

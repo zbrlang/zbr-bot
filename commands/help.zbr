@@ -3,7 +3,7 @@
 #type prefix
 #description Shows a help message with a list of all commands and their descriptions.
 
-Zreply{}
+Zreply
 Zdescription{# Help for ZBR Support Bot
 Here is the list of every single command in this bot:
 !help - Shows this message
@@ -17,4 +17,4 @@ Here is the list of every single command in this bot:
 }
 Zcolor{#ffffff}
 Zfooter{ZBR Support | Help}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}

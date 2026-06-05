@@ -109,7 +109,7 @@ Zdescription{# Functions related to Zvar{fn}
 **Other functions in the *Zvar{fc}* category**:}
 Zcolor{#ffffff}
 ZforSplit{
-  Zvar{f;ZloopValue{}}
+  Zvar{f;ZloopValue}
   Zif{Zvar{f} != Zvar{fn};
     Zvar{rlist;Zvar{rlist}
     Zvar{f} }
@@ -117,4 +117,4 @@ ZforSplit{
 }
 ZaddField{Related functions;Zvar{rlist};false}
 Zfooter{ZBR Support | Use !find to search for specific functions}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}

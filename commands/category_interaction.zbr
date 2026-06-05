@@ -3,10 +3,10 @@
 #type interaction
 #description List all functions in a ZBR category, or see all categories. Categories group functions by purpose (moderation, embeds, roles, etc.).
 
-Zupdate{}
+Zupdate
 
 
-Zif{ZcustomID{}==cat;
+Zif{ZcustomID==cat;
 Zdescription{# ZBR Function Categories (42)
 Use `!category <name>` to list functions in a specific category.}
 Zcolor{#ffffff}
@@ -21,11 +21,11 @@ ZaddField{context;Access context (author, message, guild data);false}
 ZaddField{control;Control flow, conditions, and argument checking;false}
 ZaddField{cooldown;Command cooldown management;false}
 Zfooter{ZBR Support | Page 1 of 5}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}
 ZaddButton{no;cat;Next Page;secondary}
 }
 
-Zif{ZcustomID{}==cat1;
+Zif{ZcustomID==cat1;
 Zdescription{# ZBR Function Categories (42)
 Use `!category <name>` to list functions in a specific category.}
 Zcolor{#ffffff}
@@ -40,12 +40,12 @@ Zcolor{#ffffff}
   ZaddField{json;JSON parsing and manipulation;false}
   ZaddField{loops;Looping and iteration constructs;false}
 Zfooter{ZBR Support | Page 2 of 5}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}
 ZaddButton{no;cat;Previous Page;secondary}
 ZaddButton{no;cat2;Next Page;secondary}
 }
 
-Zif{ZcustomID{}==cat2;
+Zif{ZcustomID==cat2;
 Zdescription{# ZBR Function Categories (42)
 Use `!category <name>` to list functions in a specific category.}
 Zcolor{#ffffff}
@@ -60,12 +60,12 @@ Zcolor{#ffffff}
   ZaddField{runtime;Async, delay, and execution control;false}
   ZaddField{servers;Server/guild information and management;false}
 Zfooter{ZBR Support | Page 3 of 5}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}
 ZaddButton{no;cat1;Previous Page;secondary}
 ZaddButton{no;cat3;Next Page;secondary}
 }
 
-Zif{ZcustomID{}==cat3;
+Zif{ZcustomID==cat3;
 Zdescription{# ZBR Function Categories (42)
 Use `!category <name>` to list functions in a specific category.}
 Zcolor{#ffffff}
@@ -80,12 +80,12 @@ ZaddField{soundboard;Server soundboard management;false}
   ZaddField{users;User information and queries;false}
   ZaddField{utility;Utility functions (base64, hashing, entitlements);false}
 Zfooter{ZBR Support | Page 4 of 5}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}
 ZaddButton{no;cat2;Previous Page;secondary}
 ZaddButton{no;cat4;Next Page;secondary}
 }
 
-Zif{ZcustomID{}==cat4;
+Zif{ZcustomID==cat4;
 Zdescription{# ZBR Function Categories (42)
 Use `!category <name>` to list functions in a specific category.}
 Zcolor{#ffffff}
@@ -93,5 +93,5 @@ Zcolor{#ffffff}
   ZaddField{voice;Voice channel operations and queries;false}
 ZaddButton{no;cat3;Previous Page;secondary}
 Zfooter{ZBR Support | Page 5 of 5}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}
 }

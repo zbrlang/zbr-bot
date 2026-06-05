@@ -19,4 +19,4 @@ ZaddField{Support Bot;https://zbrlang.vercel.app/support-bot;false}
 ZaddField{Support Bot (Repo);https://github.com/zbrlang/zbr-bot;false}
 Zcolor{#ffffff}
 Zfooter{ZBR Support | Links}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}

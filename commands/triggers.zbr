@@ -29,4 +29,4 @@ ZaddField{onBoostRemove;Fires when the server loses a boost.;true}
 ZaddField{onBotJoin;Fires when the bot joins a new server.;true}
 ZaddField{onBotLeave;Fires when the bot leaves a server.;true}
 Zfooter{ZBR Support | 22 results}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}

@@ -4,7 +4,7 @@
 #description Provides current statistics about the ZBR language, including total functions, categories, triggers, and the latest version.
 
 ZhttpGet{https://zbrlang.vercel.app/api/stats}
-ZjsonParse{ZhttpResult{}}
+ZjsonParse{ZhttpResult}
 Zdescription{# ZBR Statistics
 Current state of the ZBR language}
 ZaddField{Total Functions;ZjsonGet{functionsCount};true}
@@ -14,4 +14,4 @@ ZaddField{Trigger Types;6;true}
 ZaddField{Latest Version;ZjsonGet{version};true}
 Zcolor{#ffffff}
 Zfooter{ZBR Support | Statistics}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}

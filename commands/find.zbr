@@ -5,17 +5,17 @@
 
 ZargsCheck{1;1;Usage: !find <function_name>}
 ZhttpGet{https://zbrlang.vercel.app/api/functions/Zmessage{1}}
-ZjsonParse{ZhttpResult{}}
+ZjsonParse{ZhttpResult}
 Zdescription{# [ZjsonGet{name}](https://zbrlang.vercel.app/docs/functions/ZjsonGet{name})
 ZjsonGet{description}}
 Zcolor{#ffffff}
 ZaddField{Syntax;```ZhttpResult{syntax}```;false}
 ZaddField{Variadic;ZhttpResult{variadic};true}
 Zvar{as;}
-ZforJson{arguments;Zvar{as;Zvar{as}Zif{Zvar{as}!=;,}Zif{Zvar{as}!=; }ZhttpResult{arguments;Zcalculate{ZloopIndex{}-1};name} (ZhttpResult{arguments;Zcalculate{ZloopIndex{}-1};type})}}
+ZforJson{arguments;Zvar{as;Zvar{as}Zif{Zvar{as}!=;,}Zif{Zvar{as}!=; }ZhttpResult{arguments;Zcalculate{ZloopIndex-1};name} (ZhttpResult{arguments;Zcalculate{ZloopIndex-1};type})}}
 Zif{ZjsonArrayCount{arguments}>0;ZaddField{Arguments;Zvar{as};false}}
 Zif{ZjsonExists{example};
   ZaddField{Example;```ZhttpResult{example}```;false}
 }
 Zfooter{ZBR Support}
-ZfooterIcon{ZuserAvatar{ZbotID{}}}
+ZfooterIcon{ZuserAvatar{ZbotID}}
