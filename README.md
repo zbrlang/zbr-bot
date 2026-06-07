@@ -38,7 +38,7 @@ Import the [zbr-export-support-bot.zip](/zbr-export-support-bot.zip) into the [Z
 1. **Prerequisites**
    Ensure you have the [ZBR CLI](https://github.com/zbrlang/zbr) installed:
    ```bash
-   npm i @zbrlang/zbr -g
+   npm i -g @zbrlang/zbr -g
    ```
 
 2. **Configuration**
